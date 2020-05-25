@@ -188,3 +188,70 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     }
     return dummyHead.next;
 }
+
+
+
+
+class Main {
+    public static void main(String[] args) {
+        //HOME WORK :)
+
+        //1. Create an ArrayList that will hold Strings
+        List<String>arrayOfPeople = new ArrayList <String>();
+
+        //Add three names to the ArrayList
+        arrayOfPeople.add("Mike");
+        arrayOfPeople.add("Jordan");
+        arrayOfPeople.add("Kelsey");
+        System.out.println(arrayOfPeople);
+        //Remove the Second name
+        arrayOfPeople.remove("Jordan");
+        //Print out the ArrayList
+        System.out.println(arrayOfPeople);
+
+
+        //2. Create a LinkedList
+        LinkedList<Integer> integNum = new LinkedList<>();
+        // Add 5 Integers
+        integNum.add(1);
+        integNum.add(2);
+        integNum.add(3);
+        integNum.add(4);
+        integNum.add(5);
+        // Move the second to last node to the head
+        int second = integNum.get(1);
+        int last = integNum.get(4);
+        integNum.set(1,last);
+        integNum.set(4,second);
+        System.out.println(integNum);
+
+        // add the 2nd and 4th node together and store in a variable
+        int sum = integNum.get(1) + integNum.get(4);
+        //print out this variable
+        System.out.println(sum);
+        //remove the third node by referencing its value, not its index
+        int removedOne = integNum.get(2);
+        for(int i = 0; i<integNum.size(); i++){
+            if(integNum.get(i)== removedOne){
+                integNum.remove(integNum.get(i));
+            }
+        }
+        System.out.println(integNum);
+
+
+        //3. Create A HashSet
+        //Add the following values: "Brazil", "USA", "China", "Brazil"
+        Set<String> setInfo = new HashSet<>(Arrays.asList("Brazil", "USA", "China", "Brazil"));
+        //Print out the HashSet size
+        System.out.println("Size for hashset:" + setInfo.size());
+        //Iterate over the HashSet using the Iterable interface
+        for(String item : setInfo){
+            //Print out each country name
+            System.out.println(item);
+        }
+
+        // This is a bit more challenging use this reference
+        //(https://www.geeksforgeeks.org/hashset-in-java/)
+
+    }
+}
